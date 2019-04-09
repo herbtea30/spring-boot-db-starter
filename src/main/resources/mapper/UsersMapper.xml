@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.herbtea.study.springbootdbstarter.mapper.UsersMapper">
+    <select id="findUsersById" resultType="com.herbtea.study.springbootdbstarter.domain.Users">
+        SELECT *
+            FROM TESTUSER
+        WHERE 1=1
+          AND ID = #{id}
+    </select>
+
+    <insert id="saveUsers">
+        INSERT INTO TESTUSER(id, name, age)
+        VALUES ( #{id}, #{name}, #{age})
+    </insert>
+</mapper>
